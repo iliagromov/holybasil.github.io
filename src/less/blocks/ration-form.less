@@ -1,0 +1,146 @@
+.ration-form{
+    background-color: @color_lightPink;
+    padding: 100px 0 150px;
+    .sm(padding, 50px 0 0px);
+    opacity: 0;
+    transition: opacity .5s ease-out;
+    &-container{
+        .row-flex();
+        position: relative;
+        &__text{
+            .col();
+            .size(4);
+            .size-sm(12);
+            padding-top: 35px;
+            .sm(padding-bottom, 35px);
+            .page__img{
+                position: absolute;
+                bottom: -34%;
+                left: -11%;
+
+                &.img-bg_girl{
+                    z-index: 10;
+                }
+                .sm-block({
+                    bottom: -21%;
+                    left: 0;
+                });
+            }
+        }
+        &__form{
+            .col();
+            .size(7.5);
+            .size-sm(12);
+            &-action{
+                .row-flex();
+                justify-content: space-between;
+                border-top: 2px dashed @color_lightPink;
+            }
+            .page-form{
+                position: relative;
+                background-color: @color_white;
+                overflow: hidden;
+               
+                &-radio{
+                    .row-flex();
+                    .sm(flex-direction, column);
+                    padding: 36px 27px 65px;
+                    .sm-block({
+                        padding-bottom: 25px;
+                    });
+                    &__column{
+                        .col();
+                        .size(4);
+                        .size-sm(12);
+                        display: flex;
+                        flex-direction: column;
+                        .sm(padding-bottom, 20px);
+                        &:nth-child(2){
+                            padding: 0px 25px;
+                            .sm(padding, 0 0 20px 0);
+                        }
+                        .page__input-radio{
+                            margin:15px 0;
+                        }
+                    }
+                }
+                &-inputs{
+                    .col();
+                    .size(7);
+                    .size-sm(12);
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    padding-top: 57px;
+                    padding-left: 36px;
+                    .sm-block({
+                        padding-top:25px;
+                        padding-bottom:25px;
+                    });
+                    .page__label{
+                        .size-sm(12);
+                        &:last-child{
+                            width: 100%;
+                            .size-sm(12);
+                        }
+                        
+                    }
+                }
+                &-cost{
+                    .col();
+                    .size(4.4);
+                    .size-sm(12);
+                    padding: 40px 0px 40px 0px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: @color_pink;
+                    .page__text{
+                        &_bold{
+                            margin-bottom: 20px;
+                        }
+                        &_cost{
+                            display: flex;
+
+                            font-weight: bold;
+                            font-size: 36px;
+                            line-height: 48px;
+                            color:@color_red;
+                        }
+                        &_day{
+                            color: @color_white;
+                            text-transform: uppercase;
+                            font-weight: 700;
+                            margin-bottom: 35px;
+                        }
+                    }
+                    .page__btn {
+                        padding: 11px 30px;
+                        border-color: @color_white;
+                        .sm-block({
+                            z-index: 20;
+                        });
+                    }
+                }
+                .page__label{
+                    position: relative;
+                    align-self: flex-start;
+                    .size(6);
+                }
+            }
+        }
+    }
+    &.animated{
+        opacity: 1;
+        .page__title-h1,
+        .page__text,
+        .page-form,
+        .page__img{
+            .animated({
+                .fadeIn();
+                .delay(.6s);
+            });
+        }
+    }
+}

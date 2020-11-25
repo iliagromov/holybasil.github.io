@@ -1,0 +1,162 @@
+.ration-menu{
+    padding: 200px 0 145px;
+    .sm(padding,132px 0 45px);
+    opacity: 0;
+    transition: opacity .5s ease-out;
+    .page__title-h1{
+        .size(8);
+        .size-sm(12);
+        .sm(padding-left, 0);
+        padding-left: 30px;
+        display: inline-block;
+        vertical-align: text-bottom;
+    }
+    .slider{
+        padding-top: 55px;
+        padding-left: 30px;
+        .sm(padding-left, 0);
+        .tns-ovh{
+            overflow: inherit;
+            // .sm(overflow, hidden);
+            .slide.tns-item{
+                opacity: 0.5;
+                &.tns-slide-active{
+                    opacity: 1;
+                }
+                &:nth-child(1){
+                    &.tns-slide-active{
+                        margin-left: 0;
+                       
+                    }
+                }
+                &:nth-child(2){
+                    margin-left: 8%;
+                    &.tns-slide-active{
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        &__toggles{
+            // display: flex;
+            .size(4);
+            .size-sm(12);
+            .sm(justify-content, space-between);
+            display: inline-flex;
+            justify-content: flex-end;
+            vertical-align: top;
+        }
+        &__actions{
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 43px;
+            .sm(padding-top, 0);
+        }
+        &__nav{
+            font-family: @fontRegular;
+            font-style: normal;
+            font-weight: bold;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding-right: 65px;
+            padding-bottom: 16px;
+            &-number{
+                font-size: 14px;
+                line-height: 24px;
+                color: @color_lightPinkText;
+                &.active{
+                    font-size: 26px;
+                    line-height: 36px;
+                    color: @color_blueGray;
+                }
+                &:nth-child(2){
+                    &::before{
+                        content: "/";
+                        padding: 0 10px;
+                    }
+                }
+            }
+            
+        }
+    }
+    .slide{
+        .page__title-h2{
+            .size(4);
+            margin-bottom:40px;     
+        }
+        &-content{
+            // border: 1px solid;
+            
+            .row-flex();
+            
+            &__img{
+                .col();
+                .size(6);
+                .size-sm(12);
+                
+            }
+            &__text{
+                .col();
+                .size(6);
+                .size-sm(12);
+                .sm-block({
+                    padding-right: 0;
+                    .page__title-h3{
+                        position: absolute;
+                        top: -40px;
+                    }
+                    .page__lists{
+                        margin-top: -50px;
+                    }
+                });
+                display: flex;
+                flex-direction: column;
+                // justify-content: center;
+                padding-top: 50px;
+                padding-right: 28px;
+                .page__lists{
+                    padding-top: 7px;
+                    .page__list{
+                        display: flex;
+                        padding: 8px 0;
+                        &-header{
+                            display: flex;
+                            justify-content: space-between;
+                            border-bottom: 1px solid;
+                            margin: 22px 0;
+                            padding: 12px 0px;
+                        }
+                        .value{
+                            //fixMe сделать миксин стилей для шрифта
+                            font-family: @fontBold;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 11px;
+                            line-height: 24px;
+                            /* or 171% */
+    
+                            text-align: right;
+                            letter-spacing: 0.12em;
+                            text-transform: uppercase;
+                            color: @color_lightPinkText;
+                        }
+                        .time-of-day{
+                            min-width: 100px;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.animated{
+        opacity: 1;
+        .page__title-h1{
+            .animated({
+                .fadeIn();
+                .delay(.2s);
+            });
+        }
+    }
+}

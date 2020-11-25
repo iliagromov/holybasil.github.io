@@ -1,0 +1,16 @@
+mixin details(text)
+    details.page__details
+        summary.page__summary.page__text.page__text_bold=text
+        p.page__text Вкусовые привычки и пристрастия меняются также, как и всё остальное. Надо просто питаться тем, что для организма максимально эффективно и нужно. При этом оно будет вкусным.
+
+
+section.faq
+    .wrapper
+        h1.page__title-h1 FAQ и возражения по рационам
+        .faq-content
+            .faq-content__column
+                +details('Дорого')
+            .faq-content__column
+                details
+                    summary Дорого
+                    p Дорого

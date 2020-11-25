@@ -1,0 +1,37 @@
+include mixins
+
+section#rationForm.ration-form
+    .wrapper
+        .ration-form-container
+            .ration-form-container__text
+                h1.page__title-h1.page_desktop ВЫбери свой рацион
+                h1.page__title-h1.page_mobile Сколько стоит HEALTHY RATION
+                img.page__img.page_desktop(src="assets/img/img-ration-form.png", alt="")
+                
+                img.page__img.page_mobile(src="assets/img/img-ration-form-bg-mob.png", alt="")
+                img.img-bg_girl.page__img.page_mobile(src="assets/img/img-ration-form-bg-girl.png", alt="")
+            .ration-form-container__form
+                form.page-form
+                    .page-form-radio
+                        .page-form-radio__column
+                            +inputRadio('day', 'day', '1 Holly Day','1', true)
+                            +inputRadio('days', 'day', '3 Holly Day','3')
+                            +inputRadio('week', 'day', '1 Holly Week','7')
+                        .page-form-radio__column
+                            +inputRadio('kl1300', 'kl', '1300 Ккал','1300')
+                            +inputRadio('kl1800', 'kl', '1800 Ккал','1800', true)
+                        .page-form-radio__column
+                            +inputRadio('vidRast', 'vid', 'Растительный')
+                            +inputRadio('vidPest', 'vid', 'Пескетарианский', true)
+                    .ration-form-container__form-action
+                        .page-form-inputs
+                            +input('text', 'name', 'Введите Ваше имя', 'Имя')
+                            +input('phone', 'phone', 'Ваш номер', 'Телефон')
+                            +input('text', 'adress', 'Введите Ваш адрес', 'АДРЕС')
+                        .page-form-cost
+                            .page__text.page__text_bold Стоимость:
+                            .page__text.page__text_cost
+                                .cost 2 000 
+                                span  ₽
+                            .page__text.page__text_day за день
+                            button.page__btn Заказать

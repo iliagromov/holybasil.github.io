@@ -1,0 +1,117 @@
+.eco-slider{
+    background-color: @color_darkGreen;
+    padding: 214px 0 250px;
+    position: relative;
+    opacity: 0;
+    transition: opacity .5s ease-out;
+    .slider{
+        .row-flex();
+        &__text{
+            .col();
+            .size(5);
+            .size-sm(12);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 20px;
+            padding-left: 30px;
+            .sm(padding-left, 0);
+            .page__title-h1,
+            .page__text,
+            .page__btn{
+                color: @color_white;
+                .size(10);
+            }
+            .page__text{
+                .size(12);
+                padding: 43px 0 43px;
+                .sm(padding, 25px 0 40px);
+               
+            }
+            .page__btn {
+                .size(7);
+                .size-sm(10);
+                .sm-block({
+                    margin: 0 auto;
+                    position: absolute;
+                    bottom: 10%;  
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                });
+            }
+        }
+        &__img{
+            .col();
+            .size(7);
+            .size-sm(12);
+            .page__text{
+                color: @color_white;
+                font-family: @fontRegular;
+                text-transform: uppercase;
+                padding-left: 21px;
+            }
+        }
+        &__toggles{
+            display: flex;
+            justify-content: space-between;
+            padding: 41px 30px 0px 30px;
+            .sm-block({
+                padding: 25px 10px 15px;
+            });
+            .page__text{
+                padding-left: 10px;
+            }
+        }
+        &__actions{
+            display: flex;
+            justify-content: flex-end;
+            .page__btn{
+                &_prev,
+                &_next{
+                    border-color: @color_green;
+                    background-color: transparent;
+                    &:disabled{
+                        border-color: @color_lightPink ;
+                    }
+                }
+                
+            }
+        }
+        &__nav{
+            font-family: @fontRegular;
+            font-style: normal;
+            font-weight: bold;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            &-number{
+                font-size: 14px;
+                line-height: 24px;
+                color: @color_green;
+                &.active{
+                    font-size: 24px;
+                    line-height: 36px;
+                    color: @color_white;
+                }
+                &:nth-child(2){
+                    &::before{
+                        content: "/";
+                        padding: 0 10px;
+                    }
+                }
+            }
+            
+        }
+    }
+    &.animated{
+        opacity: 1;
+        .page__title-h1,
+        .page__text,
+        .slider__img{
+            .animated({
+                .fadeIn();
+                .delay(.6s);
+            });
+        }
+    }
+}

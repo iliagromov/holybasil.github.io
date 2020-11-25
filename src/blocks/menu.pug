@@ -1,0 +1,180 @@
+mixin tabContent(text, tabContentLv, active)
+    .tab-content(class=tabContentLv, class=active)
+        
+        .page__img
+            img(src="assets/img/img-menu-1.png", alt="")
+            .page__text.page__text_bold COLE SLOW LIFE 
+                span=text
+        .page__img
+            img.page__img(src="assets/img/img-menu-2.png", alt="")
+            .page__text.page__text_bold CHOCOLATE WAFFLE
+        .menu-kpfc
+            .menu-kpfc_kcal 
+                p.page__text.page__text_bold Калории
+                p.page__text 1200 Ккал
+            .menu-kpfc_protein
+                p.page__text.page__text_bold Белки
+                p.page__text 29 г
+            .menu-kpfc_fat
+                p.page__text.page__text_bold Жиры
+                p.page__text 49 г
+            .menu-kpfc_carbohydrates
+                p.page__text.page__text_bold Углеводы
+                p.page__text 11 г
+            
+
+mixin tabContentLavel(text, tabContentLv,tabContentLv3, active)
+    .tab-content(class=tabContentLv, class=active)
+        
+        +tabContent(text +' Завтрак', tabContentLv3, 'is-active')
+        +tabContent(text +' Обед', tabContentLv3)
+        +tabContent(text +' Ужин', tabContentLv3)
+        +tabContent(text +' Перекус',tabContentLv3)
+section#menu.menu
+    .wrapper
+        #tabs.tab-contents.menu-content
+            .menu-content__text
+                h1.page__title-h1 Меню
+                .page__text.page_desktop Рацион Holy Basil составлен с учетом потребности организма в различных нутриентах внутри дня. Утром будут преобладать угдеводы и жиры для энергии и сладкий вкус для снижения картизола (гормона стресса). В обед - главный приём пищи с белком. На ужин - легкие растительные продукты
+                .page__text.page_mobile Holy Basil — это доставка полезного питания, где меню основывается на принципах баланса и сочетания нутриентов для раскрытия максимальной  пользы продуктов. Мы объединили знания современной нутрициологии и древней Аюрведы, чтобы наша еда стала для Вас источником энергии и здоровья, в сочетании с потрясающим вкусом.
+                
+                .menu-content-tabs
+                    .menu-content-tabs__links
+                        .tab-nav
+                            button.page__btn_prev.tab-link.tab-link_lv-1.is-active
+                            button.page__btn_next.tab-link.tab-link_lv-1
+                        .tab-content.tab-content_lv-1.is-active 
+                            .page__text.page__text_bold Растительный рацион
+                            .menu-content-tabs__links
+                                    .tab-link.tab-link_lv-2-1.page__btn.page__btn_circle.is-active ПН
+                                    .tab-link.tab-link_lv-2-1.page__btn.page__btn_circle ВТ
+                                    .tab-link.tab-link_lv-2-1.page__btn.page__btn_circle CР
+                                    .tab-link.tab-link_lv-2-1.page__btn.page__btn_circle ЧТ
+                                    .tab-link.tab-link_lv-2-1.page__btn.page__btn_circle ПТ
+                                    .tab-link.tab-link_lv-2-1.page__btn.page__btn_circle СБ
+                                    .tab-link.tab-link_lv-2-1.page__btn.page__btn_circle ВС
+                            .menu-content-tabs__links
+                                        .tab-link.tab-link_lv-3-1.link.is-active
+                                            .page__btn.page__btn_circle
+                                                .page__icon_morning
+                                            .page__text Завтрак
+                                        .tab-link.tab-link_lv-3-1.link
+                                            .page__btn.page__btn_circle 
+                                                .page__icon_day
+                                            .page__text Обед
+                                        .tab-link.tab-link_lv-3-1.link
+                                            .page__btn.page__btn_circle 
+                                                .page__icon_moon
+                                            .page__text Ужин
+                                        .tab-link.tab-link_lv-3-1.link
+                                            .page__btn.page__btn_circle 
+                                                .page__icon_snack
+                                            .page__text Перекус
+                        .tab-content.tab-content_lv-1 
+                            .page__text.page__text_bold Растительный рацион2
+                            .menu-content-tabs__links
+                                    .tab-link.tab-link_lv-2-2.page__btn.page__btn_circle.is-active ПН
+                                    .tab-link.tab-link_lv-2-2.page__btn.page__btn_circle ВТ
+                                    .tab-link.tab-link_lv-2-2.page__btn.page__btn_circle CР
+                                    .tab-link.tab-link_lv-2-2.page__btn.page__btn_circle ЧТ
+                                    .tab-link.tab-link_lv-2-2.page__btn.page__btn_circle ПТ
+                                    .tab-link.tab-link_lv-2-2.page__btn.page__btn_circle СБ
+                                    .tab-link.tab-link_lv-2-2.page__btn.page__btn_circle ВС
+                            .menu-content-tabs__links
+                                        .tab-link.tab-link_lv-3-2.link.is-active
+                                            .page__btn.page__btn_circle
+                                                .page__icon_morning
+                                            .page__text Завтрак
+                                        .tab-link.tab-link_lv-3-2.link
+                                            .page__btn.page__btn_circle 
+                                                .page__icon_day
+                                            .page__text Обед
+                                        .tab-link.tab-link_lv-3-2.link
+                                            .page__btn.page__btn_circle 
+                                                .page__icon_moon
+                                            .page__text Ужин
+                                        .tab-link.tab-link_lv-3-2.link
+                                            .page__btn.page__btn_circle 
+                                                .page__icon_snack
+                                            .page__text Перекус
+                        //- .slider__continer
+                        //-     .slide
+                        //-         .page__link Растительный рацион
+                                //- .tab-nav.menu-content-tabs__links
+                                //-     .tab-link.page__btn.page__btn_circle.is-active ПН
+                                //-     .tab-link.page__btn.page__btn_circle ВТ
+                                //-     .tab-link.page__btn.page__btn_circle CР
+                                //-     .tab-link.page__btn.page__btn_circle ЧТ
+                                //-     .tab-link.page__btn.page__btn_circle ПТ
+                                //-     .tab-link.page__btn.page__btn_circle СБ
+                                //-     .tab-link.page__btn.page__btn_circle ВС
+                                //- .tab-nav.menu-content-tabs__links
+                                //-         .tab-link.link
+                                //-             .page__btn.page__btn_circle
+                                //-                 .page__icon_morning
+                                //-             .page__text Завтрак
+                                //-         .tab-link.link
+                                //-             .page__btn.page__btn_circle 
+                                //-                 .page__icon_day
+                                //-             .page__text Обед
+                                //-         .tab-link.link
+                                //-             .page__btn.page__btn_circle 
+                                //-                 .page__icon_moon
+                                //-             .page__text Ужин
+                                //-         .tab-link.link
+                                //-             .page__btn.page__btn_circle 
+                                //-                 .page__icon_snack
+                                //-             .page__text Перекус
+                            .slide
+                                .page__link Растительный рацион2
+                                //- .tab-nav.menu-content-tabs__links
+                                //-     .tab-link.page__btn.page__btn_circle ПН
+                                //-     .tab-link.page__btn.page__btn_circle ВТ
+                                //-     .tab-link.page__btn.page__btn_circle CР
+                                //-     .tab-link.page__btn.page__btn_circle ЧТ
+                                //-     .tab-link.page__btn.page__btn_circle ПТ
+                                //-     .tab-link.page__btn.page__btn_circle СБ
+                                //-     .tab-link.page__btn.page__btn_circle ВС
+                                //- .tab-nav.menu-content-tabs__links
+                                //-         .tab-link.link
+                                //-             .page__btn.page__btn_circle
+                                //-                 .page__icon_morning
+                                //-             .page__text Завтрак
+                                //-         .tab-link.link
+                                //-             .page__btn.page__btn_circle 
+                                //-                 .page__icon_day
+                                //-             .page__text Обед
+                                //-         .tab-link.link
+                                //-             .page__btn.page__btn_circle 
+                                //-                 .page__icon_moon
+                                //-             .page__text Ужин
+                                //-         .tab-link.link
+                                //-             .page__btn.page__btn_circle 
+                                //-                 .page__icon_snack
+                                //-             .page__text Перекус
+                        
+                    
+                    
+                    
+            .menu-content__img
+                .menu-content__img-container
+                        .tab-content.tab-content_lv-1.is-active
+                            
+                            +tabContentLavel('Растительный рацион ПН', 'tab-content_lv-2-1','tab-content_lv-3-1', 'is-active')
+                            +tabContentLavel('Растительный рацион ВТ', 'tab-content_lv-2-1','tab-content_lv-3-2')
+                            +tabContentLavel('Растительный рацион CР', 'tab-content_lv-2-1','tab-content_lv-3-3')
+                            +tabContentLavel('Растительный рацион ЧТ', 'tab-content_lv-2-1','tab-content_lv-3-4')
+                            +tabContentLavel('Растительный рацион Пт', 'tab-content_lv-2-1','tab-content_lv-3-5')
+                            +tabContentLavel('Растительный рацион СБ', 'tab-content_lv-2-1','tab-content_lv-3-6')
+                            +tabContentLavel('Растительный рацион ВС', 'tab-content_lv-2-1','tab-content_lv-3-7')
+                            
+                        .tab-content.tab-content_lv-1
+                            +tabContentLavel('Растительный рацион2 ПН','tab-content_lv-2-2','tab-content_lv-3-2-1','is-active')
+                            +tabContentLavel('Растительный рацион2 ВТ','tab-content_lv-2-2','tab-content_lv-3-2-2')
+                            +tabContentLavel('Растительный рацион2 CР','tab-content_lv-2-2','tab-content_lv-3-2-3')
+                            +tabContentLavel('Растительный рацион2 ЧТ','tab-content_lv-2-2','tab-content_lv-3-2-4')
+                            +tabContentLavel('Растительный рацион2 Пт','tab-content_lv-2-2','tab-content_lv-3-2-5')
+                            +tabContentLavel('Растительный рацион2 СБ','tab-content_lv-2-2','tab-content_lv-3-2-6')
+                            +tabContentLavel('Растительный рацион2 ВС','tab-content_lv-2-2','tab-content_lv-3-2-7')
+                    
+                

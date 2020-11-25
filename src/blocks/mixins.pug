@@ -1,0 +1,12 @@
+mixin input(typeName, name, placeholder, text)
+    label.page__label
+        input.page__input(type=typeName name=name placeholder=placeholder required) 
+        span.page__label-text.page__text.page__text_bold=text
+
+mixin inputRadio(id, name, value, data, checked)
+    .page__input-radio
+        if checked
+            input.page__radio(id=id type="radio" name=name value=value data-form=data checked)
+        else
+            input.page__radio(id=id type="radio" name=name value=value data-form=data)
+        label(for=id)=value

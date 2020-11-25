@@ -1,0 +1,516 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+@icon-act-name: 'icon-Act';
+@icon-act-x: 0px;
+@icon-act-y: 114px;
+@icon-act-offset-x: 0px;
+@icon-act-offset-y: -114px;
+@icon-act-width: 60px;
+@icon-act-height: 60px;
+@icon-act-total-width: 490px;
+@icon-act-total-height: 384px;
+@icon-act-image: '../assets/icons/sprite.png';
+@icon-act: 0px 114px 0px -114px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Act';
+@icon-arrow-name: 'icon-Arrow';
+@icon-arrow-x: 476px;
+@icon-arrow-y: 270px;
+@icon-arrow-offset-x: -476px;
+@icon-arrow-offset-y: -270px;
+@icon-arrow-width: 9px;
+@icon-arrow-height: 24px;
+@icon-arrow-total-width: 490px;
+@icon-arrow-total-height: 384px;
+@icon-arrow-image: '../assets/icons/sprite.png';
+@icon-arrow: 476px 270px -476px -270px 9px 24px 490px 384px '../assets/icons/sprite.png' 'icon-Arrow';
+@icon-cart-name: 'icon-Cart';
+@icon-cart-x: 70px;
+@icon-cart-y: 114px;
+@icon-cart-offset-x: -70px;
+@icon-cart-offset-y: -114px;
+@icon-cart-width: 60px;
+@icon-cart-height: 60px;
+@icon-cart-total-width: 490px;
+@icon-cart-total-height: 384px;
+@icon-cart-image: '../assets/icons/sprite.png';
+@icon-cart: 70px 114px -70px -114px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Cart';
+@icon-cooking-name: 'icon-Cooking';
+@icon-cooking-x: 140px;
+@icon-cooking-y: 114px;
+@icon-cooking-offset-x: -140px;
+@icon-cooking-offset-y: -114px;
+@icon-cooking-width: 60px;
+@icon-cooking-height: 60px;
+@icon-cooking-total-width: 490px;
+@icon-cooking-total-height: 384px;
+@icon-cooking-image: '../assets/icons/sprite.png';
+@icon-cooking: 140px 114px -140px -114px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Cooking';
+@icon-day-name: 'icon-Day';
+@icon-day-x: 430px;
+@icon-day-y: 316px;
+@icon-day-offset-x: -430px;
+@icon-day-offset-y: -316px;
+@icon-day-width: 24px;
+@icon-day-height: 24px;
+@icon-day-total-width: 490px;
+@icon-day-total-height: 384px;
+@icon-day-image: '../assets/icons/sprite.png';
+@icon-day: 430px 316px -430px -316px 24px 24px 490px 384px '../assets/icons/sprite.png' 'icon-Day';
+@icon-depr-name: 'icon-Depr';
+@icon-depr-x: 220px;
+@icon-depr-y: 0px;
+@icon-depr-offset-x: -220px;
+@icon-depr-offset-y: 0px;
+@icon-depr-width: 60px;
+@icon-depr-height: 60px;
+@icon-depr-total-width: 490px;
+@icon-depr-total-height: 384px;
+@icon-depr-image: '../assets/icons/sprite.png';
+@icon-depr: 220px 0px -220px 0px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Depr';
+@icon-fat-name: 'icon-Fat';
+@icon-fat-x: 220px;
+@icon-fat-y: 70px;
+@icon-fat-offset-x: -220px;
+@icon-fat-offset-y: -70px;
+@icon-fat-width: 60px;
+@icon-fat-height: 60px;
+@icon-fat-total-width: 490px;
+@icon-fat-total-height: 384px;
+@icon-fat-image: '../assets/icons/sprite.png';
+@icon-fat: 220px 70px -220px -70px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Fat';
+@icon-fit-name: 'icon-Fit';
+@icon-fit-x: 0px;
+@icon-fit-y: 184px;
+@icon-fit-offset-x: 0px;
+@icon-fit-offset-y: -184px;
+@icon-fit-width: 60px;
+@icon-fit-height: 60px;
+@icon-fit-total-width: 490px;
+@icon-fit-total-height: 384px;
+@icon-fit-image: '../assets/icons/sprite.png';
+@icon-fit: 0px 184px 0px -184px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Fit';
+@icon-fresh-name: 'icon-Fresh';
+@icon-fresh-x: 70px;
+@icon-fresh-y: 184px;
+@icon-fresh-offset-x: -70px;
+@icon-fresh-offset-y: -184px;
+@icon-fresh-width: 60px;
+@icon-fresh-height: 60px;
+@icon-fresh-total-width: 490px;
+@icon-fresh-total-height: 384px;
+@icon-fresh-image: '../assets/icons/sprite.png';
+@icon-fresh: 70px 184px -70px -184px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Fresh';
+@icon-good-name: 'icon-Good';
+@icon-good-x: 210px;
+@icon-good-y: 184px;
+@icon-good-offset-x: -210px;
+@icon-good-offset-y: -184px;
+@icon-good-width: 60px;
+@icon-good-height: 60px;
+@icon-good-total-width: 490px;
+@icon-good-total-height: 384px;
+@icon-good-image: '../assets/icons/sprite.png';
+@icon-good: 210px 184px -210px -184px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Good';
+@icon-happy-name: 'icon-Happy';
+@icon-happy-x: 290px;
+@icon-happy-y: 0px;
+@icon-happy-offset-x: -290px;
+@icon-happy-offset-y: 0px;
+@icon-happy-width: 60px;
+@icon-happy-height: 60px;
+@icon-happy-total-width: 490px;
+@icon-happy-total-height: 384px;
+@icon-happy-image: '../assets/icons/sprite.png';
+@icon-happy: 290px 0px -290px 0px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Happy';
+@icon-harmony-name: 'icon-Harmony';
+@icon-harmony-x: 290px;
+@icon-harmony-y: 70px;
+@icon-harmony-offset-x: -290px;
+@icon-harmony-offset-y: -70px;
+@icon-harmony-width: 60px;
+@icon-harmony-height: 60px;
+@icon-harmony-total-width: 490px;
+@icon-harmony-total-height: 384px;
+@icon-harmony-image: '../assets/icons/sprite.png';
+@icon-harmony: 290px 70px -290px -70px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Harmony';
+@icon-health-name: 'icon-Health';
+@icon-health-x: 290px;
+@icon-health-y: 140px;
+@icon-health-offset-x: -290px;
+@icon-health-offset-y: -140px;
+@icon-health-width: 60px;
+@icon-health-height: 60px;
+@icon-health-total-width: 490px;
+@icon-health-total-height: 384px;
+@icon-health-image: '../assets/icons/sprite.png';
+@icon-health: 290px 140px -290px -140px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Health';
+@icon-immuno-name: 'icon-Immuno';
+@icon-immuno-x: 0px;
+@icon-immuno-y: 254px;
+@icon-immuno-offset-x: 0px;
+@icon-immuno-offset-y: -254px;
+@icon-immuno-width: 60px;
+@icon-immuno-height: 60px;
+@icon-immuno-total-width: 490px;
+@icon-immuno-total-height: 384px;
+@icon-immuno-image: '../assets/icons/sprite.png';
+@icon-immuno: 0px 254px 0px -254px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Immuno';
+@icon-inst-name: 'icon-Inst';
+@icon-inst-x: 430px;
+@icon-inst-y: 270px;
+@icon-inst-offset-x: -430px;
+@icon-inst-offset-y: -270px;
+@icon-inst-width: 36px;
+@icon-inst-height: 36px;
+@icon-inst-total-width: 490px;
+@icon-inst-total-height: 384px;
+@icon-inst-image: '../assets/icons/sprite.png';
+@icon-inst: 430px 270px -430px -270px 36px 36px 490px 384px '../assets/icons/sprite.png' 'icon-Inst';
+@icon-moon-name: 'icon-Moon';
+@icon-moon-x: 464px;
+@icon-moon-y: 316px;
+@icon-moon-offset-x: -464px;
+@icon-moon-offset-y: -316px;
+@icon-moon-width: 24px;
+@icon-moon-height: 24px;
+@icon-moon-total-width: 490px;
+@icon-moon-total-height: 384px;
+@icon-moon-image: '../assets/icons/sprite.png';
+@icon-moon: 464px 316px -464px -316px 24px 24px 490px 384px '../assets/icons/sprite.png' 'icon-Moon';
+@icon-morning-name: 'icon-Morning';
+@icon-morning-x: 430px;
+@icon-morning-y: 350px;
+@icon-morning-offset-x: -430px;
+@icon-morning-offset-y: -350px;
+@icon-morning-width: 24px;
+@icon-morning-height: 24px;
+@icon-morning-total-width: 490px;
+@icon-morning-total-height: 384px;
+@icon-morning-image: '../assets/icons/sprite.png';
+@icon-morning: 430px 350px -430px -350px 24px 24px 490px 384px '../assets/icons/sprite.png' 'icon-Morning';
+@icon-old-name: 'icon-Old';
+@icon-old-x: 140px;
+@icon-old-y: 254px;
+@icon-old-offset-x: -140px;
+@icon-old-offset-y: -254px;
+@icon-old-width: 60px;
+@icon-old-height: 60px;
+@icon-old-total-width: 490px;
+@icon-old-total-height: 384px;
+@icon-old-image: '../assets/icons/sprite.png';
+@icon-old: 140px 254px -140px -254px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Old';
+@icon-onion-name: 'icon-Onion';
+@icon-onion-x: 210px;
+@icon-onion-y: 254px;
+@icon-onion-offset-x: -210px;
+@icon-onion-offset-y: -254px;
+@icon-onion-width: 60px;
+@icon-onion-height: 60px;
+@icon-onion-total-width: 490px;
+@icon-onion-total-height: 384px;
+@icon-onion-image: '../assets/icons/sprite.png';
+@icon-onion: 210px 254px -210px -254px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Onion';
+@icon-plus-name: 'icon-Plus';
+@icon-plus-x: 430px;
+@icon-plus-y: 210px;
+@icon-plus-offset-x: -430px;
+@icon-plus-offset-y: -210px;
+@icon-plus-width: 50px;
+@icon-plus-height: 50px;
+@icon-plus-total-width: 490px;
+@icon-plus-total-height: 384px;
+@icon-plus-image: '../assets/icons/sprite.png';
+@icon-plus: 430px 210px -430px -210px 50px 50px 490px 384px '../assets/icons/sprite.png' 'icon-Plus';
+@icon-plus-big-name: 'icon-PlusBig';
+@icon-plus-big-x: 0px;
+@icon-plus-big-y: 0px;
+@icon-plus-big-offset-x: 0px;
+@icon-plus-big-offset-y: 0px;
+@icon-plus-big-width: 104px;
+@icon-plus-big-height: 104px;
+@icon-plus-big-total-width: 490px;
+@icon-plus-big-total-height: 384px;
+@icon-plus-big-image: '../assets/icons/sprite.png';
+@icon-plus-big: 0px 0px 0px 0px 104px 104px 490px 384px '../assets/icons/sprite.png' 'icon-PlusBig';
+@icon-protein-name: 'icon-Protein';
+@icon-protein-x: 280px;
+@icon-protein-y: 254px;
+@icon-protein-offset-x: -280px;
+@icon-protein-offset-y: -254px;
+@icon-protein-width: 60px;
+@icon-protein-height: 60px;
+@icon-protein-total-width: 490px;
+@icon-protein-total-height: 384px;
+@icon-protein-image: '../assets/icons/sprite.png';
+@icon-protein: 280px 254px -280px -254px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Protein';
+@icon-rec-name: 'icon-Rec';
+@icon-rec-x: 360px;
+@icon-rec-y: 70px;
+@icon-rec-offset-x: -360px;
+@icon-rec-offset-y: -70px;
+@icon-rec-width: 60px;
+@icon-rec-height: 60px;
+@icon-rec-total-width: 490px;
+@icon-rec-total-height: 384px;
+@icon-rec-image: '../assets/icons/sprite.png';
+@icon-rec: 360px 70px -360px -70px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Rec';
+@icon-science-name: 'icon-Science';
+@icon-science-x: 360px;
+@icon-science-y: 140px;
+@icon-science-offset-x: -360px;
+@icon-science-offset-y: -140px;
+@icon-science-width: 60px;
+@icon-science-height: 60px;
+@icon-science-total-width: 490px;
+@icon-science-total-height: 384px;
+@icon-science-image: '../assets/icons/sprite.png';
+@icon-science: 360px 140px -360px -140px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Science';
+@icon-sick-name: 'icon-Sick';
+@icon-sick-x: 360px;
+@icon-sick-y: 210px;
+@icon-sick-offset-x: -360px;
+@icon-sick-offset-y: -210px;
+@icon-sick-width: 60px;
+@icon-sick-height: 60px;
+@icon-sick-total-width: 490px;
+@icon-sick-total-height: 384px;
+@icon-sick-image: '../assets/icons/sprite.png';
+@icon-sick: 360px 210px -360px -210px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Sick';
+@icon-skin-bad-name: 'icon-SkinBad';
+@icon-skin-bad-x: 0px;
+@icon-skin-bad-y: 324px;
+@icon-skin-bad-offset-x: 0px;
+@icon-skin-bad-offset-y: -324px;
+@icon-skin-bad-width: 60px;
+@icon-skin-bad-height: 60px;
+@icon-skin-bad-total-width: 490px;
+@icon-skin-bad-total-height: 384px;
+@icon-skin-bad-image: '../assets/icons/sprite.png';
+@icon-skin-bad: 0px 324px 0px -324px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-SkinBad';
+@icon-skin-good-name: 'icon-SkinGood';
+@icon-skin-good-x: 70px;
+@icon-skin-good-y: 324px;
+@icon-skin-good-offset-x: -70px;
+@icon-skin-good-offset-y: -324px;
+@icon-skin-good-width: 60px;
+@icon-skin-good-height: 60px;
+@icon-skin-good-total-width: 490px;
+@icon-skin-good-total-height: 384px;
+@icon-skin-good-image: '../assets/icons/sprite.png';
+@icon-skin-good: 70px 324px -70px -324px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-SkinGood';
+@icon-sleep-name: 'icon-Sleep';
+@icon-sleep-x: 140px;
+@icon-sleep-y: 324px;
+@icon-sleep-offset-x: -140px;
+@icon-sleep-offset-y: -324px;
+@icon-sleep-width: 60px;
+@icon-sleep-height: 60px;
+@icon-sleep-total-width: 490px;
+@icon-sleep-total-height: 384px;
+@icon-sleep-image: '../assets/icons/sprite.png';
+@icon-sleep: 140px 324px -140px -324px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Sleep';
+@icon-sleep-bad-name: 'icon-SleepBad';
+@icon-sleep-bad-x: 210px;
+@icon-sleep-bad-y: 324px;
+@icon-sleep-bad-offset-x: -210px;
+@icon-sleep-bad-offset-y: -324px;
+@icon-sleep-bad-width: 60px;
+@icon-sleep-bad-height: 60px;
+@icon-sleep-bad-total-width: 490px;
+@icon-sleep-bad-total-height: 384px;
+@icon-sleep-bad-image: '../assets/icons/sprite.png';
+@icon-sleep-bad: 210px 324px -210px -324px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-SleepBad';
+@icon-snack-name: 'icon-Snack';
+@icon-snack-x: 464px;
+@icon-snack-y: 350px;
+@icon-snack-offset-x: -464px;
+@icon-snack-offset-y: -350px;
+@icon-snack-width: 24px;
+@icon-snack-height: 24px;
+@icon-snack-total-width: 490px;
+@icon-snack-total-height: 384px;
+@icon-snack-image: '../assets/icons/sprite.png';
+@icon-snack: 464px 350px -464px -350px 24px 24px 490px 384px '../assets/icons/sprite.png' 'icon-Snack';
+@icon-stomach-name: 'icon-Stomach';
+@icon-stomach-x: 280px;
+@icon-stomach-y: 324px;
+@icon-stomach-offset-x: -280px;
+@icon-stomach-offset-y: -324px;
+@icon-stomach-width: 60px;
+@icon-stomach-height: 60px;
+@icon-stomach-total-width: 490px;
+@icon-stomach-total-height: 384px;
+@icon-stomach-image: '../assets/icons/sprite.png';
+@icon-stomach: 280px 324px -280px -324px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Stomach';
+@icon-stress-name: 'icon-Stress';
+@icon-stress-x: 350px;
+@icon-stress-y: 324px;
+@icon-stress-offset-x: -350px;
+@icon-stress-offset-y: -324px;
+@icon-stress-width: 60px;
+@icon-stress-height: 60px;
+@icon-stress-total-width: 490px;
+@icon-stress-total-height: 384px;
+@icon-stress-image: '../assets/icons/sprite.png';
+@icon-stress: 350px 324px -350px -324px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Stress';
+@icon-tired-name: 'icon-Tired';
+@icon-tired-x: 430px;
+@icon-tired-y: 0px;
+@icon-tired-offset-x: -430px;
+@icon-tired-offset-y: 0px;
+@icon-tired-width: 60px;
+@icon-tired-height: 60px;
+@icon-tired-total-width: 490px;
+@icon-tired-total-height: 384px;
+@icon-tired-image: '../assets/icons/sprite.png';
+@icon-tired: 430px 0px -430px 0px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Tired';
+@icon-video-name: 'icon-Video';
+@icon-video-x: 114px;
+@icon-video-y: 0px;
+@icon-video-offset-x: -114px;
+@icon-video-offset-y: 0px;
+@icon-video-width: 96px;
+@icon-video-height: 97px;
+@icon-video-total-width: 490px;
+@icon-video-total-height: 384px;
+@icon-video-image: '../assets/icons/sprite.png';
+@icon-video: 114px 0px -114px 0px 96px 97px 490px 384px '../assets/icons/sprite.png' 'icon-Video';
+@icon-water-name: 'icon-Water';
+@icon-water-x: 430px;
+@icon-water-y: 70px;
+@icon-water-offset-x: -430px;
+@icon-water-offset-y: -70px;
+@icon-water-width: 60px;
+@icon-water-height: 60px;
+@icon-water-total-width: 490px;
+@icon-water-total-height: 384px;
+@icon-water-image: '../assets/icons/sprite.png';
+@icon-water: 430px 70px -430px -70px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Water';
+@icon-young-name: 'icon-Young';
+@icon-young-x: 430px;
+@icon-young-y: 140px;
+@icon-young-offset-x: -430px;
+@icon-young-offset-y: -140px;
+@icon-young-width: 60px;
+@icon-young-height: 60px;
+@icon-young-total-width: 490px;
+@icon-young-total-height: 384px;
+@icon-young-image: '../assets/icons/sprite.png';
+@icon-young: 430px 140px -430px -140px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-Young';
+@icon-gluten-free-name: 'icon-glutenFree';
+@icon-gluten-free-x: 140px;
+@icon-gluten-free-y: 184px;
+@icon-gluten-free-offset-x: -140px;
+@icon-gluten-free-offset-y: -184px;
+@icon-gluten-free-width: 60px;
+@icon-gluten-free-height: 60px;
+@icon-gluten-free-total-width: 490px;
+@icon-gluten-free-total-height: 384px;
+@icon-gluten-free-image: '../assets/icons/sprite.png';
+@icon-gluten-free: 140px 184px -140px -184px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-glutenFree';
+@icon-oil-name: 'icon-oil';
+@icon-oil-x: 70px;
+@icon-oil-y: 254px;
+@icon-oil-offset-x: -70px;
+@icon-oil-offset-y: -254px;
+@icon-oil-width: 60px;
+@icon-oil-height: 60px;
+@icon-oil-total-width: 490px;
+@icon-oil-total-height: 384px;
+@icon-oil-image: '../assets/icons/sprite.png';
+@icon-oil: 70px 254px -70px -254px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-oil';
+@icon-rec-white-name: 'icon-rec-white';
+@icon-rec-white-x: 360px;
+@icon-rec-white-y: 0px;
+@icon-rec-white-offset-x: -360px;
+@icon-rec-white-offset-y: 0px;
+@icon-rec-white-width: 60px;
+@icon-rec-white-height: 60px;
+@icon-rec-white-total-width: 490px;
+@icon-rec-white-total-height: 384px;
+@icon-rec-white-image: '../assets/icons/sprite.png';
+@icon-rec-white: 360px 0px -360px 0px 60px 60px 490px 384px '../assets/icons/sprite.png' 'icon-rec-white';
+@spritesheet-width: 490px;
+@spritesheet-height: 384px;
+@spritesheet-image: '../assets/icons/sprite.png';
+@spritesheet-sprites: @icon-act @icon-arrow @icon-cart @icon-cooking @icon-day @icon-depr @icon-fat @icon-fit @icon-fresh @icon-good @icon-happy @icon-harmony @icon-health @icon-immuno @icon-inst @icon-moon @icon-morning @icon-old @icon-onion @icon-plus @icon-plus-big @icon-protein @icon-rec @icon-science @icon-sick @icon-skin-bad @icon-skin-good @icon-sleep @icon-sleep-bad @icon-snack @icon-stomach @icon-stress @icon-tired @icon-video @icon-water @icon-young @icon-gluten-free @icon-oil @icon-rec-white;
+@spritesheet: 490px 384px '../assets/icons/sprite.png' @spritesheet-sprites;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  background-image: e(%('url(%a)', e(@sprite-image)));
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: e(extract(@sprite, 10));
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}

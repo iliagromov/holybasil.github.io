@@ -1,0 +1,16 @@
+include mixins
+
+section#modal-callback.modal.modal-callback.page_hidden
+    .modal-container
+        .modal__action
+            button.page__btn.page__btn_close.close-modal(data-modal="modal-callback")
+        .modal__content
+            h2.page__title-h2 обратный звонок
+            p.page__text Введите Ваши данные и мы обязательно свяжимся с Вами
+            form.page-form(action="")
+                +input('text', 'name', 'Введите Ваше имя', 'Имя')
+                +input('phone', 'phone', 'Ваш номер', 'Телефон')
+                .page-form__action
+                    button.page__btn Заказать обратный звонок
+        .img-bg.img-bg_serfer
+            img.page__img(src="assets/img/img-serfer-2.png", alt="")  

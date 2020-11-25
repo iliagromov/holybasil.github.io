@@ -1,0 +1,96 @@
+.article{
+    &_wrapper{
+        max-width: 1340px;
+    }
+    // height: 100vh;
+    padding: 200px 0;
+    background-color: @color_lightPink;
+    opacity: 0;
+    transition: opacity .5s ease-out;
+    .sm(padding, 130px 0);
+    .page__lists{
+        margin-bottom:80px; 
+        .page__list{
+            margin-left: 18px;
+        }
+        .page__text{
+            color: #000;
+            font-size: 14px;
+        }
+    }
+    &-items{
+        .row-flex();
+        padding: 35px 0;
+        &__item{
+            .col();
+            .size(4);
+            .size-sm(12);
+            .page__title-h4{
+                padding: 20px 0 10px;
+            }
+            padding: 20px 0;
+        }
+    }
+    &-info{
+        .row-flex();
+        justify-content: flex-end;
+        padding-top: 35px;
+        &__bg{
+            .col();
+            .size(10);
+            .size-sm(11);
+            position: relative;
+            display: flex;
+            align-items: center;
+            background-color: #F05240;
+            padding: 85px 0;
+            .sm-block({
+                flex-wrap: wrap;
+            });
+            .page__title-h2{
+                .size(7.5);
+                .size-sm(12);
+                .shift-left(-2);
+                .sm-block({
+                    font-size: 24px;
+                    line-height: 36px;
+                });
+            }
+            .page__text{
+                margin-left: 25px;
+                .size(4);
+                .size-sm(12);
+                color: @color_white;
+            }
+            .page__img{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+            .img-bg_tiger{
+                .sm-block({
+                    right: -25%;
+                });
+                
+            }
+
+        }
+    }
+    &.animated{
+        opacity: 1;
+        .page__title-h1,
+        .page__title-h2,
+        .page__text,
+        .article-items__item{
+            .animated({
+                .fadeIn();
+                .delay(.2s);
+            });
+        }
+        .article-items__item{
+            .delay(.6s);
+        }
+        
+        
+    }
+}

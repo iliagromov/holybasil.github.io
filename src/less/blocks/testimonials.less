@@ -1,0 +1,170 @@
+.testimonials{
+    background-color: @color_lightPink;
+    padding: 200px 0;
+    .sm(padding, 100px 0);
+    opacity: 0;
+    transition: opacity .5s ease-out;
+    &__text{
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        .sm-block({
+            flex-wrap: wrap;
+            padding-left:0;
+            text-align: center;
+        });
+        .page__title-h1{
+            .size(6.5);
+            .sm(width, 100%);
+        }
+        .page__text{
+            .shift-left(1);
+            .shift-sm-left(0);
+            .size-sm(10);
+            .sm(margin,0 auto);
+        }
+    }
+    &__slider{
+      
+        position: relative;
+        .slide{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // background-color: @color_white;
+            // max-width: 860px;
+            margin: 0 auto;
+            text-align: center;
+            padding-bottom: 70px;
+            margin-top:50px;
+            padding-top: 100px;
+            .sm-block({
+                padding-top: 100px;
+            });
+            &__video{
+                position: relative;
+                top: -100px;
+                video{
+                    max-height: 392px;
+                }
+                .page__icon_video{
+                    cursor: pointer;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    min-width: auto;
+                    width: 96px;
+                    height: 97px;
+                    padding: 0;
+                    // border: 1px solid @color_pink;
+                    transform: translate(-50%, -50%);
+                }
+               
+            }
+            .page__text{
+                .size(6);
+                .size-sm(12);
+                &_bold{
+                    .sm-block({
+                        margin-top: -70px;
+                    });
+                }
+                &_subtext{
+                    .sm-block({
+                        margin-bottom:20px;
+                    });
+                }
+            }
+        }
+        .slider{
+            position: relative;
+            .tns-ovh{
+                overflow: inherit;
+                z-index: 10;
+                position: relative;
+            }
+            &__bg{
+                width: 850px;
+                height: 550px;
+                background: #fff;
+                margin: 0 auto;
+                position: absolute;
+                top: 63%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                .sm-block({
+                    height: 350px;
+                    top: 50%;
+                });
+            }
+            &__nav{
+                font-family: @fontRegular;
+                font-style: normal;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 16px;
+                &-number{
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: @color_lightPinkText;
+                    &.active{
+                        font-size: 26px;
+                        line-height: 36px;
+                        color: @color_blueGray;
+                    }
+                    &:nth-child(2){
+                        &::before{
+                            content: "/";
+                            padding: 0 10px;
+                        }
+                    }
+                }
+                
+            }
+            &__actions{
+                .page__btn{
+                    &_prev,
+                    &_next{
+                        border-color: @color_white;
+                        background-color: transparent;
+                        position: absolute;
+                        top: 30%;
+                        z-index: 10;
+                        .sm-block({
+                            bottom: 0;
+                            top: auto
+                        });
+                        &:disabled{
+                            border-color: @color_yellow;
+                        }
+                    }
+                    &_next{
+                        right: 0;
+                    }
+                    
+                }
+            }
+        }
+        
+        .page__text{
+            .size(10);
+            margin: 0 auto;
+            &_subtext{
+                color: @color_pink;
+            }
+        }
+    }
+    &.animated{
+        opacity: 1;
+        .page__title-h1,
+        .page__text,
+        .testimonials__slider{
+            .animated({
+                .fadeIn();
+                .delay(.6s);
+            });
+        }
+    }
+}

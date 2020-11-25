@@ -1,0 +1,17 @@
+include mixins
+section.form-callback
+    .wrapper
+        h2.page__title-h2 если у вас есть вопросы или замечания 
+        form.page-form(action="")
+            +input('text', 'name', 'Введите Ваше имя', 'Имя')
+            +input('phone', 'phone', 'Ваш номер', 'Телефон')
+            +input('email', 'email', 'Ваш e-mail', 'Почта')
+            label.page__label.page__label-textarea
+                textarea.page__textarea(placeholder="Можете ввести Ваше сообщение")
+                span.page__label-text.page__text.page__text_bold Ваше сообщение (необязательно)
+            label.page__label.page__label_checkbox
+                input.page__input_checkbox(type="checkbox")
+                span.checkmark
+                .page__text Обрабатывать персональные данные
+            .page-form__action
+                button.page__btn Отправить сообщение

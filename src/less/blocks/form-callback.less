@@ -1,0 +1,90 @@
+.form-callback{
+    padding: 130px 0 80px;
+    background-color: @color_blue;
+    opacity: 0;
+    transition: opacity .5s ease-out;
+    .sm-block({
+        padding: 100px 0 80px;
+    });
+    .page__title-h2{
+        text-align: center;
+        .sm-block({
+            font-size: 24px;
+            line-height: 36px;
+        });
+    }
+    .page-form{
+        padding: 60px 0 0;
+        .row-flex();
+        .page__label{
+            .col();
+            .size(4);
+            .size-sm(12);
+            position: relative;
+            margin-bottom: 25px;
+            &-textarea{
+                .size(8);
+            }
+            &_checkbox{
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                .page__text{
+                    margin-left: 30px;
+                }
+                .page__input_checkbox {
+                    position: absolute;
+                    opacity: 0;
+                    height: 0;
+                    width: 0;
+                    &:checked ~ .checkmark:after {
+                        display: block;
+                    }
+                }
+            }
+            .checkmark {
+                position: absolute;
+                height: 24px;
+                width: 24px;
+                background-color: transparent;
+                border: 2px solid @color_blueGray;
+                box-sizing: border-box;
+                &:after {
+                    display: none;
+                    content: "";
+                    position: absolute;
+                    left: 6px;
+                    top: 2px;
+                    width: 5px;
+                    height: 10px;
+                    border: solid @color_red;
+                    border-width: 0 3px 3px 0;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+        .page__input,
+        .page__textarea{
+            
+            &::placeholder{
+                color:@color_blueGray;
+            }
+        }
+        &__action{
+            .col();
+            .size(12);
+            text-align: center;
+            padding-top: 50px;
+        }
+    }
+    &.animated{
+        opacity: 1;
+        .page__title-h2,
+        .page-form{
+            .animated({
+                .fadeIn();
+                .delay(.6s);
+            });
+        }
+    }
+}

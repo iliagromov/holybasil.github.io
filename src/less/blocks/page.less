@@ -1,0 +1,327 @@
+.page{
+    overflow-x: hidden;
+    &__title{
+        &-h1,
+        &-h2,
+        &-h3,
+        &-h4{
+            font-family: @fontBold;
+            color: @color_red;
+            font-style: normal;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            font-feature-settings: 'pnum' on, 'lnum' on, 'liga' off;
+            
+        }
+        &-h1{
+            font-size: 54px;
+            line-height: 72px;
+            .sm-block({
+                font-size: 36px;
+                line-height: 48px;
+            });
+        }
+        &-h2{
+            font-size: 36px;
+            line-height: 48px;
+        }
+        &-h3{
+            font-size: 24px;
+            line-height: 36px;
+            letter-spacing: 0.12em;
+            .sm-block({
+                font-size: 16px;
+                line-height: 28px;
+            });
+        }
+        &-h4{
+            color: @color_blueGray;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+    &__text{
+        font-family: '@{Montserrat}-Regular';
+        color: @color_blueGray;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 30px;
+        z-index: 10;
+        .sm-block({
+            font-size: 14px;
+            line-height: 24px;
+        });
+        &_bold{
+            font-family: '@{Montserrat}-Bold';
+            font-weight: 600;
+            line-height: 24px;
+        }
+    }
+    &__link{
+        color: @color_blueGray;
+        font-family: @fontBold;
+        font-style: normal;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.12em;
+        font-feature-settings: 'pnum' on, 'lnum' on, 'liga' off;
+        &_big{
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
+    &__btn{
+        // display: flex;
+        // align-items: center;
+        padding: 15px 18px;
+        cursor: pointer;
+        font-family: @fontBold;
+        color: @color_blueGray;
+        background-color: transparent;
+        border: 2px solid @color_pink;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-feature-settings: 'pnum' on, 'lnum' on, 'liga' off;
+        
+
+        box-sizing: border-box;
+        border-radius: 30px;
+        transition: all .2s ease-out;
+        &:hover{
+            color: @color_yellow;
+            border-color:@color_yellow;        
+        }
+        &_prev,
+        &_next{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 100%;
+            background-color: @color_white;
+            border: 2px solid @color_yellow;
+            
+            &:disabled{
+                border-color: @color_lightPink;
+            }
+            &::before{
+                content: "";
+                display: inline-block;
+                .sprite(@icon-arrow);
+            }
+        }
+        &_prev{
+            margin-right: 18px;
+            &::before{
+                transform: rotate(180deg);
+            } 
+        }
+        &_circle{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            border: 2px solid @color_lightPink;
+            &.active{
+                color: @color_red;
+                box-shadow: 0px 9px 24px -2px rgba(212, 199, 217, 0.35);
+                border: none;
+            }
+        }
+        &_menu{
+            border: 2px solid @color_pink;
+            padding: 0;
+            position: relative;
+            &::before,
+            &::after{
+                content: '';
+                display: inline-block;
+                width: 26px;
+                left: 10px;
+                height: 3px;
+                border-radius: 3px;
+                background-color: @color_blueGray;
+                position: absolute;
+            }
+            &::before{
+                top: 14px;
+                
+            }
+            &::after{
+                top: 21px;
+            }
+            .line{
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    width: 26px;
+                    left: 10px;
+                    top: 28px;
+                    height: 3px;
+                    border-radius: 3px;
+                    background-color: @color_blueGray;
+                    position: absolute;
+                }
+            }
+        }
+    }
+    &__lists{
+        padding-left:0;
+    }
+    &__list {
+        font-family: '@{Montserrat}-Bold';
+        font-style: normal;
+        font-size: 14px;
+        line-height: 24px;
+        color: #000000;
+        padding-bottom: 10px;
+    }
+    &__icon{
+        min-width: 60px;
+        &_immuno{
+            .sprite(@icon-immuno);
+        }
+        &_young{
+            .sprite(@icon-young);
+        }
+        &_skinGood{
+            .sprite(@icon-skin-good);
+        }
+        &_happy{
+            .sprite(@icon-happy);
+        }
+        &_act{
+            .sprite(@icon-act);
+        }
+        &_harmony{
+            .sprite(@icon-harmony);
+        }
+        &_fit{
+            .sprite(@icon-fit);
+        }
+        &_sleep{
+            .sprite(@icon-sleep);
+        }
+        &_good{
+            .sprite(@icon-good);
+        }
+        &_rec-white{
+            .sprite(@icon-rec-white);
+        }
+        &_instagram{
+            .sprite(@icon-inst);
+        }
+        &_morning{
+            .sprite(@icon-morning);
+        }
+        &_day{
+            .sprite(@icon-day);
+        }
+        &_moon{
+            .sprite(@icon-moon);
+        }
+        &_snack{
+            .sprite(@icon-snack);
+        }
+        &_science{
+            .sprite(@icon-science);
+        }
+        &_protein{
+            .sprite(@icon-protein);
+        }
+        &_oil{
+            .sprite(@icon-oil);
+        }
+        &_fresh{
+            .sprite(@icon-fresh);
+        }
+        &_glutenFree{
+            .sprite(@icon-gluten-free);
+        }
+        &_water{
+            .sprite(@icon-water);
+        }
+        &_video{
+            .sprite(@icon-video);
+        }
+    }
+    &__input,
+    &__textarea{
+        border: none;
+        background: transparent;
+        border-bottom: 2px solid @color_blueGray;
+        height: 40px;
+        width: 100%;
+        &::placeholder{
+            color:@color_lightPinkText;
+        }
+    }
+    &__textarea{
+        resize: none;
+    }
+    &__label{
+        
+        &-text{
+            // position: absolute;
+            left: 0;
+            bottom: -20px;
+        }
+        &_adress{
+            width: 100%;
+        }
+    }
+    &_hidden{
+        display: none !important;
+    }
+    &_desktop{
+        display: block;
+        .sm(display, none);
+    }
+    &_mobile{
+        display: none;
+        .sm(display, block);
+    }
+    // &__details{
+    //     position: relative;
+    //     summary{
+    //         position: relative;
+    //         &::before,
+    //         &::after{
+    //             content: '';
+    //             cursor: pointer;
+    //             position: absolute;
+    //             display: inline-block;
+    //             background-color: @color_pink;
+               
+    //         }
+    //         &::before{
+    //             top: 0;
+    //             left: -7px;
+    //             width: 18px;
+    //             height: 2px;
+    //         }
+    //         &::after{
+    //             top: -7px;
+    //             left: 0;
+    //             width: 2px;
+    //             height: 18px;
+    //         }
+    //     }
+    //     &[open]{
+    //         summary{
+
+    //         }
+    //     }
+    // }
+}
