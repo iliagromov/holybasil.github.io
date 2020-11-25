@@ -42,14 +42,6 @@ window.addEventListener('scroll', (e) => {
         percentLeft = 0.05;
         animateBottle(value,valueStart, valueTop, valueleft, percentTop, percentLeft);
     }
-    else if (document.body.clientWidth < breakPointsMmd) {
-        valueTop = -38;
-        valueleft = 80;
-        valueStart = 600;
-        percentTop = 0.15;
-        percentLeft = 0.05;
-        animateBottle(value,valueStart, valueTop, valueleft,percentTop,percentLeft);
-    }
     else if (document.body.clientWidth <= breakPointsMmd && document.body.clientWidth > breakPointsSm) {
         valueTop = -38;
         valueleft = 86;
@@ -57,7 +49,16 @@ window.addEventListener('scroll', (e) => {
         percentTop = 0.15;
         percentLeft = 0.05;
         animateBottle(value,valueStart, valueTop, valueleft,percentTop,percentLeft);
-    } else {
+    }
+    else if (document.body.clientWidth > breakPointsMmd) {
+        valueTop = -38;
+        valueleft = 80;
+        valueStart = 600;
+        percentTop = 0.15;
+        percentLeft = 0.05;
+        animateBottle(value,valueStart, valueTop, valueleft,percentTop,percentLeft);
+    }
+     else {
         return false;
     }
 
