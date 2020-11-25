@@ -18,6 +18,8 @@
     
     &__logo{
         .size(3);
+        .size-md(0);
+        .size-sm(3);
         .page__img{
             position: absolute;
             top: 60%;
@@ -37,6 +39,9 @@
         .page__link{
             text-align: center;
             padding: 0 30px;
+            .md-block({
+                padding: 0 15px;
+            });
         }
         .page__btn{
             height: 48px;
@@ -44,12 +49,23 @@
             display: flex;
             align-items: center;
         }
+        .md-block({
+            width: 90%;
+            display: flex;
+            justify-content: flex-end;
+        });
         .sm(display,none);
     }
     &__actions{
         display: flex;
         align-items: center;
         
+        .md-block({
+            width: 53%;
+        });
+        .sm-block({
+            width: auto;
+        });
         .page__link{
             font-family: '@{Montserrat}-Regular';
             padding-right: 28px;

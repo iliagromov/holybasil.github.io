@@ -3,9 +3,13 @@
     padding: 180px 0 30px;
     opacity: 0;
     transition: opacity .5s ease-out;
+    .md(padding,73px 0 30px);
     .sm-block({
-        padding: 270px 0 30px;
+        padding: 80% 0 62%;
+        z-index: 10;
+        position: relative;
     });
+    .xs(opacity, 1);
     .wrapper{
         max-width: 1140px;  
     }
@@ -38,6 +42,11 @@
             position: relative;
             bottom: -108px;
             z-index: 10;
+            .xs-block({
+                position: absolute;
+                bottom: -165%;
+                z-index: 10;
+            });
         }
         .page__icon{
             width: 150px;
@@ -51,7 +60,9 @@
             right: 9%;
             top: 16%;
             .sm-block({
-                top: -60%;
+                top: -32%;
+                transform: scale(.7);
+                right: 0;
             });
         }
     }

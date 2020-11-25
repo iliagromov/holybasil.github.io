@@ -12,11 +12,15 @@
             text-transform: uppercase;
             letter-spacing: 0.02em;
             font-feature-settings: 'pnum' on, 'lnum' on, 'liga' off;
-            
+           
         }
         &-h1{
             font-size: 54px;
             line-height: 72px;
+            .md-block({
+                font-size: 3vw;
+                line-height: 5vw;
+            });
             .sm-block({
                 font-size: 36px;
                 line-height: 48px;
@@ -25,6 +29,10 @@
         &-h2{
             font-size: 36px;
             line-height: 48px;
+            .md-block({
+                font-size: 2.5vw;
+                line-height: 4vw;
+            });
         }
         &-h3{
             font-size: 24px;
@@ -155,7 +163,8 @@
                 position: absolute;
             }
             &::before{
-                top: 14px;
+                top: 13.9px;
+
                 
             }
             &::after{

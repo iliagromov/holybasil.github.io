@@ -9,8 +9,9 @@ section#rationForm.ration-form
                 img.page__img.page_desktop(src="assets/img/img-ration-form.png", alt="")
                 
                 img.page__img.page_mobile(src="assets/img/img-ration-form-bg-mob.png", alt="")
-                img.img-bg_girl.page__img.page_mobile(src="assets/img/img-ration-form-bg-girl.png", alt="")
+               
             .ration-form-container__form
+                
                 form.page-form
                     .page-form-radio
                         .page-form-radio__column
@@ -29,6 +30,7 @@ section#rationForm.ration-form
                             +input('phone', 'phone', 'Ваш номер', 'Телефон')
                             +input('text', 'adress', 'Введите Ваш адрес', 'АДРЕС')
                         .page-form-cost
+                            img.img-bg_girl.page__img.page_mobile(src="assets/img/img-ration-form-bg-girl.png", alt="")
                             .page__text.page__text_bold Стоимость:
                             .page__text.page__text_cost
                                 .cost 2 000 

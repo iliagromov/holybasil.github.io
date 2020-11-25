@@ -3,7 +3,12 @@
     padding: 214px 0 250px;
     position: relative;
     opacity: 0;
+    .xs(opacity, 1);
     transition: opacity .5s ease-out;
+    .md(padding, 20px 0 30px);
+    .sm-block({
+        padding: 25% 0 35%;
+    });
     .slider{
         .row-flex();
         &__text{
@@ -34,7 +39,7 @@
                 .sm-block({
                     margin: 0 auto;
                     position: absolute;
-                    bottom: 10%;  
+                    bottom: -19%;  
                     left: 50%;
                     transform: translate(-50%, -50%);
                 });

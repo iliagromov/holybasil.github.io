@@ -2,6 +2,7 @@
     padding: 145px 0;
     opacity: 0;
     transition: opacity .5s ease-out;
+    .md(padding, 20px 0);
     &-content{
         .row-flex();
         &__text{
@@ -36,6 +37,11 @@
             .shift-left(.4);
             .sm-block({
                 margin-top: 50px;
+            });
+            .xs-block({
+                img{
+                    object-fit: cover;
+                }
             });
             // margin-left: 64px;
             // margin-right: -100px;

@@ -11,7 +11,7 @@ module.exports = {
             width: "1550px"
         },
 		md: {
-            width: "1152px"
+            width: "1280px"
         },
         sm: {
             width: "1024px",
@@ -22,6 +22,10 @@ module.exports = {
         },
         xs: {
             width: "576px"
+        },
+        xxs: {
+            width: "375px",
+            fields: "15px"
         },
 	},
     //detailedCalc: true

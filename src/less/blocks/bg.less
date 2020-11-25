@@ -36,6 +36,11 @@
              .mmd-block({
                 left: 86%;
             });
+            .md-block({
+                .page__img{
+                    transform: scale(.8);
+                }
+            });
             transition: all .3s ease-out;
             transform: translate(-44%, -42%);
             // top: 50%;
@@ -58,15 +63,23 @@
                     width: 75%;
                 }
             });
+            .md-block({
+                .page__img{
+                    width: 55%;
+                }
+            });
             .xs-block({
                 left: 0;
-                bottom: -165px;
+                bottom: -5%;
                 top: auto;
                 z-index: 10;
                 .page__img{
                     width: 100%;
                     transform: scale(1);
                 }
+            });
+            .xxs-block({
+                bottom: -2%;
             });
         }
         &_serfer{
@@ -76,12 +89,21 @@
                 left: 6%;
                 bottom: 0;
             });
+            .md-block({
+                .page__img{
+                    transform: scale(.7);
+                }
+            });
             .xs-block({
-                left: -28%;
-                bottom: 0;
+                left: -34%;
+                bottom: 16%;
                 .page__img{
                     transform: scale(.8);
                 };
+            });
+            .xxs-block({
+                left: -47%;
+                bottom: 11%;
             });
         }
         &_fish{
@@ -93,7 +115,8 @@
             });
             .xs-block({
                 left: auto;
-                right: 0;
+                bottom: 22%;
+                right: 2%;
             });
         }
         &_tiger{
@@ -104,6 +127,11 @@
                     .bounceTiger();
                     .delay(.5s);
                 },2s);
+                .xs-block({
+                    .animated({
+                        .none();
+                    }); 
+                });
                
             }
         }
@@ -115,6 +143,11 @@
                     .bounceLeafs();
                     .delay(.5s);
                 },2s);
+                .xs-block({
+                    .animated({
+                        .none();
+                    }); 
+                });
                
             }
         }

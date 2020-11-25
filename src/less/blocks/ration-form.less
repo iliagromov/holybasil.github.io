@@ -1,9 +1,16 @@
 .ration-form{
     background-color: @color_lightPink;
     padding: 100px 0 150px;
+    .md(padding, 20px 0);
     .sm(padding, 50px 0 0px);
     opacity: 0;
+    .xs(opacity, 1);
     transition: opacity .5s ease-out;
+    .xs-block({
+        position: relative;
+        z-index: 11;
+
+    });
     &-container{
         .row-flex();
         position: relative;
@@ -31,15 +38,22 @@
             .col();
             .size(7.5);
             .size-sm(12);
+            .img-bg_girl{
+                
+                    position: absolute;
+                    bottom: -21%;
+                    left: 1px;
+
+            }
             &-action{
                 .row-flex();
                 justify-content: space-between;
                 border-top: 2px dashed @color_lightPink;
             }
             .page-form{
-                position: relative;
+                // position: relative;
                 background-color: @color_white;
-                overflow: hidden;
+                // overflow: hidden;
                
                 &-radio{
                     .row-flex();
@@ -135,12 +149,14 @@
         opacity: 1;
         .page__title-h1,
         .page__text,
-        .page-form,
-        .page__img{
+        .page-form{
             .animated({
                 .fadeIn();
                 .delay(.6s);
             });
+        }
+        .page-form{
+            .delay(0s);
         }
     }
 }

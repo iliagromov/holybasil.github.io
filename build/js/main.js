@@ -6,18 +6,19 @@ let classBg = 'banner-info_bg-green';
 let imgBannerInfo = bannerInfo.querySelectorAll('.img-bg_center');
 let valueTop, valueleft;
 let breakPointsMmd = 1550;
+let breakPointsMd = 1280;
 let breakPointsSm = 1024;
 
-function animateBottle(value, valueTop, valueleft, translate) {
+function animateBottle(value, valueStart, valueTop, valueleft, percentTop, percentLeft) {
     if (value <= 90) {
         bottle.style.top = valueTop + '%';
         bottle.style.left = valueleft + '%';
         bottle.style.transform = 'translate(-44%, -42%) rotate(0deg)';
-    } else if (value <= 600) {
-        bottle.style.top = valueTop + (value * 0.15) + '%';
-        bottle.style.left = valueleft - (value * 0.05) + '%';
+    } else if (value <= valueStart) {
+        bottle.style.top = valueTop + (value * percentTop) + '%';
+        bottle.style.left = valueleft - (value * percentLeft) + '%';
         bannerInfo.classList.remove('animated');
-    } else if (value > 600) {
+    } else if (value > valueStart) {
 
         bottle.style.top = 50 + '%';
         bottle.style.left = 50 + '%';
@@ -33,15 +34,29 @@ function animateBottle(value, valueTop, valueleft, translate) {
 window.addEventListener('scroll', (e) => {
     let value = window.scrollY;
 
-    if (document.body.clientWidth > breakPointsMmd) {
+    if (document.body.clientWidth < breakPointsMd) {
         valueTop = -38;
         valueleft = 80;
-        animateBottle(value, valueTop, valueleft);
+        valueStart = 300;
+        percentTop = 0.15;
+        percentLeft = 0.05;
+        animateBottle(value,valueStart, valueTop, valueleft, percentTop, percentLeft);
+    }
+    else if (document.body.clientWidth < breakPointsMmd) {
+        valueTop = -38;
+        valueleft = 80;
+        valueStart = 600;
+        percentTop = 0.15;
+        percentLeft = 0.05;
+        animateBottle(value,valueStart, valueTop, valueleft,percentTop,percentLeft);
     }
     else if (document.body.clientWidth <= breakPointsMmd && document.body.clientWidth > breakPointsSm) {
         valueTop = -38;
         valueleft = 86;
-        animateBottle(value, valueTop, valueleft);
+        valueStart = 600;
+        percentTop = 0.15;
+        percentLeft = 0.05;
+        animateBottle(value,valueStart, valueTop, valueleft,percentTop,percentLeft);
     } else {
         return false;
     }
