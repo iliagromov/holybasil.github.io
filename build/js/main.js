@@ -30,7 +30,7 @@ function transformElemenOnMouse(element,evt,positionTop, positionY, startX,start
 document.addEventListener('mousemove', function(evt){
     transformElemenOnMouse(serfer, evt,undefined,1, 8, 100, w, h);
     transformElemenOnMouse(holybottle, evt,'top',0, 2, 100, w, h);
-    transformElemenOnMouse(fish, evt,undefined,16, 5, 500, w, h);
+    transformElemenOnMouse(fish, evt,undefined,20, 5, 100, w, h);
 })
 
 
