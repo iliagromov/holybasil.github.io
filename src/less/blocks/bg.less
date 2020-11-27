@@ -30,16 +30,19 @@
         &_holy-main{
            
             .sm(display,none);
-            // top: 38%;
-            // right: 8%;
+            // top: -38%;
+            // left: 80%;
             z-index: 10;
              .mmd-block({
-                left: 86%;
+                // left: 86%;
+                transform:translate(-18%, -55%) rotate(0deg);
             });
             .md-block({
-                .page__img{
-                    transform: scale(.8);
-                }
+                top: -38%;
+                left: 80%;
+                right: auto;
+                transform:translate(-35%, -55%) rotate(0deg);
+                
             });
             transition: all .3s ease-out;
             transform: translate(-44%, -42%);
@@ -112,6 +115,13 @@
             .mmd-block({
                 left: 0%;
                 bottom: 15%;
+            });
+            .md-block({
+                left: 0%;
+                bottom: 30%;
+                .page__img{
+                    width: 75%;
+                }
             });
             .xs-block({
                 left: auto;

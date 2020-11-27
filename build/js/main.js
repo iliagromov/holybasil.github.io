@@ -9,11 +9,11 @@ let breakPointsMmd = 1550;
 let breakPointsMd = 1280;
 let breakPointsSm = 1024;
 
-function animateBottle(value, valueStart, valueTop, valueleft, percentTop, percentLeft) {
+function animateBottle(value, valueStart, valueTop, valueleft, percentTop, percentLeft, transform, transform2) {
     if (value <= 90) {
         bottle.style.top = valueTop + '%';
         bottle.style.left = valueleft + '%';
-        bottle.style.transform = 'translate(-44%, -42%) rotate(0deg)';
+        bottle.style.transform = transform;
     } else if (value <= valueStart) {
         bottle.style.top = valueTop + (value * percentTop) + '%';
         bottle.style.left = valueleft - (value * percentLeft) + '%';
@@ -23,7 +23,7 @@ function animateBottle(value, valueStart, valueTop, valueleft, percentTop, perce
         bottle.style.top = 50 + '%';
         bottle.style.left = 50 + '%';
 
-        bottle.style.transform = 'translate(-44%, -42%) rotate(20deg)';
+        bottle.style.transform = transform2;
         bannerInfo.classList.add('animated');
         // bottle.style.transform = 'translate(-46%, -42%) rotate(20deg)';
     } else {
@@ -40,15 +40,19 @@ window.addEventListener('scroll', (e) => {
         valueStart = 300;
         percentTop = 0.15;
         percentLeft = 0.05;
-        animateBottle(value,valueStart, valueTop, valueleft, percentTop, percentLeft);
+        transform = 'translate(-35%, -55%) rotate(0deg)';
+        transform2 = 'translate(-44%, -42%) rotate(20deg)';
+        animateBottle(value,valueStart, valueTop, valueleft, percentTop, percentLeft,transform, transform2);
     }
     else if (document.body.clientWidth <= breakPointsMmd && document.body.clientWidth > breakPointsSm) {
         valueTop = -38;
-        valueleft = 86;
+        valueleft = 80;
         valueStart = 600;
         percentTop = 0.15;
         percentLeft = 0.05;
-        animateBottle(value,valueStart, valueTop, valueleft,percentTop,percentLeft);
+        transform = 'translate(-18%, -42%) rotate(0deg)';
+        transform2 = 'translate(-44%, -42%) rotate(20deg)';
+        animateBottle(value,valueStart, valueTop, valueleft,percentTop,percentLeft,transform,transform2);
     }
     else if (document.body.clientWidth > breakPointsMmd) {
         valueTop = -38;
@@ -56,7 +60,9 @@ window.addEventListener('scroll', (e) => {
         valueStart = 600;
         percentTop = 0.15;
         percentLeft = 0.05;
-        animateBottle(value,valueStart, valueTop, valueleft,percentTop,percentLeft);
+        transform = 'translate(-44%, -42%) rotate(0deg)';
+        transform2 = 'translate(-44%, -42%) rotate(20deg)';
+        animateBottle(value,valueStart, valueTop, valueleft,percentTop,percentLeft,transform,transform2);
     }
      else {
         return false;
@@ -127,14 +133,13 @@ addCurrentIndexOfSlider('.testimonials', sliderTestimonial);
 
 
 
-// window.addEventListener('scroll', function () {
-//     let html = document.querySelector('html');
-//     if (html.dataset.scroll >= 100) {
-//         document.querySelector('.header').classList.add('header-open');
-//     } else {
-//         document.querySelector('.header').classList.remove('header-open');
-//     }
-// });
+window.addEventListener('scroll', function () {
+    if (document.body.clientWidth <= 768) {
+        document.querySelector('.header').classList.add('header-open');
+    } else {
+        document.querySelector('.header').classList.remove('header-open');
+    }
+});
 
 // let video = document.getElementById('videoRationInfo');
 let videos = document.querySelectorAll('.slide__video');

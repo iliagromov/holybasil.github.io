@@ -2875,6 +2875,8 @@ input[type="radio"]:checked + label::before {
 
 .testimonials__slider .slide__video video {
   max-height: 392px;
+  max-width: 592px;
+  width: 100%;
 }
 
 .testimonials__slider .slide__video .page__icon_video {
@@ -3469,7 +3471,8 @@ input[type="radio"]:checked + label::before {
 
 @media screen and (max-width: 1550px) {
   .img-bg_holy-main {
-    left: 86%;
+    -webkit-transform: translate(-18%, -55%) rotate(0deg);
+            transform: translate(-18%, -55%) rotate(0deg);
   }
 
   .img-bg_holybottle {
@@ -3522,9 +3525,12 @@ input[type="radio"]:checked + label::before {
     line-height: 4vw;
   }
 
-  .img-bg_holy-main .page__img {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+  .img-bg_holy-main {
+    top: -38%;
+    left: 80%;
+    right: auto;
+    -webkit-transform: translate(-35%, -55%) rotate(0deg);
+            transform: translate(-35%, -55%) rotate(0deg);
   }
 
   .img-bg_holybottle .page__img {
@@ -3534,6 +3540,15 @@ input[type="radio"]:checked + label::before {
   .img-bg_serfer .page__img {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
+  }
+
+  .img-bg_fish {
+    left: 0%;
+    bottom: 30%;
+  }
+
+  .img-bg_fish .page__img {
+    width: 75%;
   }
 
   .header__logo {
@@ -3556,6 +3571,11 @@ input[type="radio"]:checked + label::before {
     width: 53%;
   }
 
+  .banner-content .page__title-h1 .teaser-circle {
+    top: -115%;
+    right: -36%;
+  }
+
   .article_wrapper {
     margin-top: -10%;
   }
@@ -3570,6 +3590,10 @@ input[type="radio"]:checked + label::before {
 
   .menu {
     padding: 20px 0;
+  }
+
+  .menu-content-tabs__links .link .page__text {
+    padding-left: 15px;
   }
 
   .advantages {
@@ -4486,6 +4510,10 @@ input[type="radio"]:checked + label::before {
   .menu-content__img img {
     -o-object-fit: cover;
        object-fit: cover;
+  }
+
+  .menu-content-tabs__links .tab-link.page__btn_circle {
+    margin-bottom: 14px;
   }
 
   .ration-info {

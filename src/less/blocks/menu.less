@@ -26,6 +26,7 @@
                 .size-sm(12);
                 .sm(margin, 0 auto);
                 padding-top: 43px;
+                
             }
             
         }
@@ -115,6 +116,7 @@
                             padding-top: 0;
                             padding-left: 25px;
                             .sm(padding,0);
+                           
                         }
                     }
                 }
@@ -149,6 +151,9 @@
                     &.page__btn_circle{
                         margin-right: 14px;
                         transition: none;
+                        .xs-block({
+                            margin-bottom: 14px;
+                        });
                     }
                     &.is-active{
                         &.page__btn_circle{
@@ -167,6 +172,12 @@
                     display: inline-flex;
                     align-items: center;
                     margin-right: 19px;
+                    .md-block({
+                        .page__text{
+                            padding-left: 15px;
+                        }
+                        
+                    });
                     .sm-block({
                         display: flex;
                         flex-direction: column;
