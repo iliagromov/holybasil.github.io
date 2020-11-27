@@ -850,6 +850,8 @@ video {
 .img-bg_holybottle {
   top: 16px;
   left: 8.6%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .img-bg_holybottle .page__img {
@@ -860,11 +862,15 @@ video {
 .img-bg_serfer {
   left: 16%;
   bottom: 7%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .img-bg_fish {
   left: 5%;
   bottom: 28%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .img-bg_tiger {

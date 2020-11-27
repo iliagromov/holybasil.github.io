@@ -9,6 +9,31 @@ let breakPointsMmd = 1550;
 let breakPointsMd = 1280;
 let breakPointsSm = 1024;
 
+let serfer = document.querySelector('.img-bg_serfer');
+let holybottle = document.querySelector('.img-bg_holybottle');
+let fish = document.querySelector('.img-bg_fish');
+
+
+w = document.documentElement.offsetWidth,
+h = document.documentElement.offsetHeight;
+function transformElemenOnMouse(element,evt,positionTop, positionY, startX,startY, w, h){
+    var posX = Math.round(evt.clientX / w * startX)
+    var posY = Math.round(evt.clientY / h * startY)
+    element.style.left = posX + '%';
+    if(positionTop){
+        element.style.top = positionY + posY + '%';
+    }else{
+        element.style.bottom = positionY + posY + '%';
+    }
+    
+}
+document.addEventListener('mousemove', function(evt){
+    transformElemenOnMouse(serfer, evt,undefined,1, 8, 100, w, h);
+    transformElemenOnMouse(holybottle, evt,'top',0, 2, 100, w, h);
+    transformElemenOnMouse(fish, evt,undefined,16, 5, 500, w, h);
+})
+
+
 function animateBottle(value, valueStart, valueTop, valueleft, percentTop, percentLeft, transform, transform2) {
     if (value <= 90) {
         bottle.style.top = valueTop + '%';
