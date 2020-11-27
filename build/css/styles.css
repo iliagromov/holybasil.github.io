@@ -761,6 +761,10 @@ video {
   display: none !important;
 }
 
+.page_opacity-hidden {
+  opacity: 0;
+}
+
 .page_desktop {
   display: block;
 }
@@ -1052,7 +1056,7 @@ video {
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   box-sizing: border-box;
@@ -1577,53 +1581,6 @@ video {
   70% {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-  }
-}
-
-.banner.animated ~ .banner-info .img-bg_holybottleMain {
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: bounceBottle2;
-  animation-name: bounceBottle2;
-  -webkit-transform-origin: center bottom;
-  transform-origin: center bottom;
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-}
-
-@-webkit-keyframes bounceBottle2 {
-  from, 20%, to {
-    -webkit-transform: translate3d(-50%, -50%, 0);
-            transform: translate3d(-50%, -50%, 0);
-  }
-
-  40% {
-    -webkit-transform: translate3d(-60%, -40%, 0);
-            transform: translate3d(-60%, -40%, 0);
-  }
-
-  70% {
-    -webkit-transform: translate3d(-50%, -50%, 0);
-            transform: translate3d(-50%, -50%, 0);
-  }
-}
-
-@keyframes bounceBottle2 {
-  from, 20%, to {
-    -webkit-transform: translate3d(-50%, -50%, 0);
-            transform: translate3d(-50%, -50%, 0);
-  }
-
-  40% {
-    -webkit-transform: translate3d(-60%, -40%, 0);
-            transform: translate3d(-60%, -40%, 0);
-  }
-
-  70% {
-    -webkit-transform: translate3d(-50%, -50%, 0);
-            transform: translate3d(-50%, -50%, 0);
   }
 }
 
@@ -3924,7 +3881,7 @@ input[type="radio"]:checked + label::before {
   .advantages__img .img-bg_bird {
     right: 0;
     left: auto;
-    top: -40%;
+    top: -15%;
   }
 
   .ration-info-container__text {

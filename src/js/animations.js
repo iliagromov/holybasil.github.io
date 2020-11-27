@@ -40,9 +40,9 @@ const visible = function (target, element) {
                 }
         }
         if(target.offsetParent ){
-            return element ? element.classList.remove(animated) : target.classList.remove(animated);
+            // return element ? element.classList.remove(animated) : target.classList.remove(animated);
         } else{
-            return element ? element.classList.remove(animated) : target.classList.remove(animated);
+            // return element ? element.classList.remove(animated) : target.classList.remove(animated);
         }// Если элемент не видно, то запускаем этот код
     };
 };

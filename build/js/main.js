@@ -127,20 +127,27 @@ addCurrentIndexOfSlider('.testimonials', sliderTestimonial);
 
 
 
-window.addEventListener('scroll', function () {
-    let html = document.querySelector('html');
-    if (html.dataset.scroll >= 100) {
-        document.querySelector('.header').classList.add('header-open');
-    } else {
-        document.querySelector('.header').classList.remove('header-open');
-    }
-});
+// window.addEventListener('scroll', function () {
+//     let html = document.querySelector('html');
+//     if (html.dataset.scroll >= 100) {
+//         document.querySelector('.header').classList.add('header-open');
+//     } else {
+//         document.querySelector('.header').classList.remove('header-open');
+//     }
+// });
 
 // let video = document.getElementById('videoRationInfo');
 let videos = document.querySelectorAll('.slide__video');
 videos.forEach((e) => {
     let video = e.querySelector('video');
-    e.querySelector('.page__icon_video').addEventListener('click', (e) => {
+    let iconVideo = e.querySelector('.page__icon_video');
+    video.addEventListener('play', (e)=>{
+        iconVideo.classList.add('page_hidden');
+    });
+    video.addEventListener('pause', (e)=>{
+        iconVideo.classList.remove('page_hidden');
+    });
+    iconVideo.addEventListener('click', (e) => {
         e.target.classList.add('page_hidden');
         // console.log(video);
         video.play();
