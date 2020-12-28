@@ -44,11 +44,12 @@
             });
             &__video{
                 position: relative;
-                top: -100px;
+                top: -10px;
                 video{
-                    max-height: 392px;
-                    max-width: 592px;
+                    min-height: 392px;
+                    max-width: 235px;
                     width: 100%;
+                    object-fit: cover;
                 }
                 .page__icon_video{
                     cursor: pointer;
@@ -87,14 +88,19 @@
                 position: relative;
             }
             &__bg{
-                width: 850px;
+                width: 350px;
                 height: 550px;
                 background: #fff;
-                margin: 0 auto;
+                // margin: 0 auto;
                 position: absolute;
                 top: 63%;
-                left: 50%;
                 transform: translate(-50%, -50%);
+                &:nth-of-type(2){
+                    left: 25%;
+                }
+                &:nth-of-type(3){
+                    right: -4%;
+                }
                 .sm-block({
                     height: 350px;
                     top: 50%;

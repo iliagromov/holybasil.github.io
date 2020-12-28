@@ -146,9 +146,20 @@ addCurrentIndexOfSlider('.eco-slider', sliderEco);
 
 var sliderTestimonial = tns({
     container: '.testimonials .slider__continer',
-    items: 1,
-    center: true,
-    loop: true,
+    items: 2,
+    responsive: {
+        640: {
+            items: 1
+        },
+        1024: {
+          items: 1
+        },
+        1025: {
+            items: 2
+          },
+    },
+    center: false,
+    loop: false,
     prevButton: '.testimonials .page__btn_prev',
     nextButton: '.testimonials .page__btn_next',
     mouseDrag: true,

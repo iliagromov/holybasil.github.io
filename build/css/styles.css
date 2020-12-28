@@ -2876,13 +2876,15 @@ input[type="radio"]:checked + label::before {
 
 .testimonials__slider .slide__video {
   position: relative;
-  top: -100px;
+  top: -10px;
 }
 
 .testimonials__slider .slide__video video {
-  max-height: 392px;
-  max-width: 592px;
+  min-height: 392px;
+  max-width: 235px;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .testimonials__slider .slide__video .page__icon_video {
@@ -2913,15 +2915,21 @@ input[type="radio"]:checked + label::before {
 }
 
 .testimonials__slider .slider__bg {
-  width: 850px;
+  width: 350px;
   height: 550px;
   background: #fff;
-  margin: 0 auto;
   position: absolute;
   top: 63%;
-  left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.testimonials__slider .slider__bg:nth-of-type(2) {
+  left: 25%;
+}
+
+.testimonials__slider .slider__bg:nth-of-type(3) {
+  right: -4%;
 }
 
 .testimonials__slider .slider__nav {
